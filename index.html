@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Doença</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>diagnostico de doensa </h1>
+        <h2>nao presisa mais ir no medicu kkk</h2>
+    </header>
+    <main>
+        <section>
+            <h2>selecione abaicho seus sintomas q vc ta sentimdo</h2>
+            <form id="diagnosis-form">
+                <label for="disease">iscolha uma doensa:</label>
+                <select id="disease" name="disease">
+                    <option value="<h1> hello world! </h1>">covide</option>
+                    <option value="<h1> hello world! </h1>">dor de cabesa</option>
+                    <option value="<h1> hello world! </h1>">variola dos macaco</option>
+                    <option value="<h1> hello world! </h1>">dor no olvido</option>
+                    <option value="<h1> hello world! </h1>">aidis</option>
+                    <option value="<h1> hello world! </h1>">gonorreia</option>
+                    <option value="<h1> hello world! </h1>">sinzomar</option>
+                    <option value="<h1> hello world! </h1>">bolsonaro lovers</option>
+                </select>
+                <button type="button" onclick="diagnose()">clique para saber seu diaguinostico</button>
+            </form>
+            <div id="result" style="display: none;">
+                <p>caregando...</p>
+            </div>
+            <div id="diagnosis-message" style="display: none;">
+                <p>seu diagnostico: <span id="diagnosis"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Diagnóstico de Doença</p>
+    </footer>
+
+    <script>
+        function diagnose() {
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('diagnosis-message').style.display = 'none';
+            
+            setTimeout(() => {
+                const disease = document.getElementById('disease').value;
+                document.getElementById('diagnosis').textContent = disease;
+                document.getElementById('result').style.display = 'none';
+                document.getElementById('diagnosis-message').style.display = 'block';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
